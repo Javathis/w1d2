@@ -120,3 +120,74 @@ const quotient = divide(9, 3);
 console.log(quotient);
 
 */
+
+const bootcamps = ["UX/UI", "WebDev"];
+const cities = ["Berlin", "Amsterdam", "Paris", "Madrid", "Barcelona"];
+const digits = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+const falsy = [null, false, undefined, "", 0, NaN];
+const arrayOfArrays = [bootcamps, cities, digits, falsy, []];
+
+const emptyArray = [];
+emptyArray.push("random value");
+console.log(emptyArray);
+
+// let studentsCountries = [];
+const studentsCountries = ["Portugal", "Bengladesh", "Germany"];
+console.log(studentsCountries[0]);
+console.log(studentsCountries[studentsCountries.length - 1]);
+
+studentsCountries[0] = "India";
+
+// add an element to the end of the array
+studentsCountries.push("Sweden");
+studentsCountries.push("Russia", "France");
+
+// add an element in the beginning of the array
+studentsCountries.unshift("Ukraine");
+studentsCountries.unshift();
+
+// inserts an element at a specified index
+studentsCountries.splice(1, 1, "England"); // removes element at index 1 and adds "England" at that index
+studentsCountries.splice(2, 0, "India");
+
+// remove element at specified index
+studentsCountries.splice(4, 2); // deletes 2 elements starting from index 4
+
+// remove first element
+studentsCountries.shift();
+
+// remove last element
+studentsCountries.pop();
+
+console.log(studentsCountries);
+
+// iterate over array
+
+for (let i = 0; i < studentsCountries.length; i += 1) {
+  console.log(studentsCountries[i]);
+}
+
+// forEach is an array method, that takes as a parameter a callback function that will be called on every iteration, with the current element as the first parameter
+studentsCountries.forEach(function(country, i) {
+  console.log(country + " is at index " + i);
+});
+
+function printCountry(country, i) {
+  console.log(country + " is at index " + i);
+}
+studentsCountries.forEach(printCountry);
+
+/*
+for (const country of studentsCountries) {
+  console.log(country.toUpperCase());
+}
+*/
+/*
+studentsCountries.forEach(country => {
+  console.log(country);
+});
+*/
+
+[null, undefined, 0, "", NaN].forEach(function(el) {
+  console.log(el);
+});
