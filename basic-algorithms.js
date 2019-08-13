@@ -41,9 +41,9 @@ for (let i = navigatorLen - 1; i >= 0; i -= 1) {
 
 console.log(navigatorStr);
 
-if (driver.localeCompare(navigator) > 0) {
+if (driver.localeCompare(navigator) < 0) {
   console.log("The driver's name goes first");
-} else if (driver.localeCompare(navigator) < 0) {
+} else if (driver.localeCompare(navigator) > 0) {
   console.log("Yo, the navigator goes first definitely");
 } else {
   console.log("What?! You both got the same name?");
